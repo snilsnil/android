@@ -3,6 +3,7 @@ package com.example.snilsnil;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,8 +33,19 @@ public class MainActivity extends AppCompatActivity {
                 , Toast.LENGTH_SHORT).show();
             }
         });
-
-
         
+        /* 체크박스 만들기 */
+        CheckBox check1;
+
+        check1 = (CheckBox) findViewById(R.id.check1);
+        
+        //체크박스 이벤트 처리
+        check1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "체크박스 클릭",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
