@@ -56,7 +56,7 @@
 
 
     <!-- 4개의 버튼 -->
-    <Button
+   <!-- <Button
         android:id="@+id/btnNate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -83,7 +83,49 @@
         android:layout_height="wrap_content"
         android:text="끝내기"
         android:textSize="50px"
-        android:background="@android:color/holo_orange_light"/>
+        android:background="@android:color/holo_orange_light"/>-->
+
+
+    <!-- 프로젝트 Exer2_7 -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit1"
+        android:hint="URL을 입력하세요" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnToast"
+        android:text="글자 나타내기" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnHomepage"
+        android:text="홈페이지 열기" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdoCo"
+            android:checked="true"
+            android:text="12.0(Snow Corn)" />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdoTi"
+            android:text="13.0(Tiramisu)"/>
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivAndroid"
+        android:layout_gravity="center"
+        android:src="@drawable/snow_corn" />
+
 
 
 

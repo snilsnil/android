@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -53,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         /* 4개 버튼 */
-        Button btnNate, btn911, btnGal, btnEnd;
+       /* Button btnNate, btn911, btnGal, btnEnd;
 
         btnNate = findViewById(R.id.btnNate);
         btn911 = findViewById(R.id.btn911);
@@ -89,6 +92,54 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 finish();
             }
+        });*/
+
+
+        /* 프로젝트 Exer2_7 */
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.ic_launcher);
+        setTitle("좀 그럴듯한 앱");
+
+        EditText edit1;
+        Button btnToast, btnHomepage;
+        RadioButton rdoCorn, rdoTira;
+        ImageView ivAndroid;
+
+        edit1 = findViewById(R.id.edit1);
+        btnToast = findViewById(R.id.btnToast);
+        btnHomepage=findViewById(R.id.btnHomepage);
+        rdoCorn = findViewById(R.id.rdoCo);
+        rdoTira = findViewById(R.id.rdoTi);
+        ivAndroid = findViewById(R.id.ivAndroid);
+
+        btnToast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),
+                        edit1.getText().toString(), Toast.LENGTH_SHORT).show();
+            }
         });
+        btnHomepage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(edit1
+                        .getText().toString()));
+                startActivity(mIntent);
+            }
+        });
+        rdoCorn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ivAndroid.setImageResource(R.drawable.snow_corn);
+            }
+        });
+        rdoTira.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ivAndroid.setImageResource(R.drawable.tiramisu01);
+            }
+        });
+
     }
 }
